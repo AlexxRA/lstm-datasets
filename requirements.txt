@@ -1,0 +1,11 @@
+flask
+requests
+numpy
+matplotlib
+tensorflow
+tensorflow.keras 
+keras
+pandas
+nltk
+seaborn
+sklearn

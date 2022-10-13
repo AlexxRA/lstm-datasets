@@ -55,12 +55,14 @@ def predict():
 
     # if parameters are found, return a prediction
     if (params != None):
-        x=[params["msg"]]
+        x=[params["text_to_predict"]]
 
         sequence = tokenizer.texts_to_sequences(x)
         sequence = pad_sequences(sequence, maxlen=370)
 
-        data["prediction"] = str("positive" if model.predict(sequence)[0][0] > 0.55 else "negative")
+        prediction = model.predict(sequence)[0][0]
+        data["prediction-value"] = str("positive" if prediction > 0.55 else "negative")
+        data["prediction-score"] = str(prediction)
         data["success"] = True
 
     # return a response in json format 

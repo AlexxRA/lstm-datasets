@@ -1,0 +1,12 @@
+version: "3.8"
+
+services:
+  web:
+    container_name: lstm-service
+    build:
+      context: .
+      target: builder
+      dockerfile: ./Dockerfile
+    stop_signal: SIGINT
+    ports:
+      - '5005:5005'

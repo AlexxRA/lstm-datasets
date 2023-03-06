@@ -72,4 +72,4 @@ def predict():
 tokenizer = initTokenizer()
 
 # start the flask app, allow remote connections
-app.run(host='0.0.0.0')
+app.run(host='0.0.0.0', port=5005)

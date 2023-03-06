@@ -1,8 +1,8 @@
 version: "3.8"
 
 services:
-  web:
-    container_name: lstm-service
+  api:
+    container_name: sentiment-predictor
     build:
       context: .
       target: builder

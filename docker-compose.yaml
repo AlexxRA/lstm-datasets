@@ -10,3 +10,9 @@ services:
     stop_signal: SIGINT
     ports:
       - '5005:5005'
+    networks:
+      - smart_activity_network
+
+networks:
+  smart_activity_network:
+    external: true
